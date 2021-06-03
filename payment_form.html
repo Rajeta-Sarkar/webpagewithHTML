@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment karo</title>
+</head>
+<body>
+    <!-- action : you write the link of your server 
+         method : get : is shown in url
+                  post : used for secure transactions
+        
+        if not mentioned the method is by default get
+    -->
+    <form action="">
+        <h2> Payment Form </h2>
+        <h4> Contact Information </h4>
+        <p> Name: <input type="text" name="name" id="" required> </p>
+
+        <p>Email: <input type="email" name="email" id="" required></p>
+        <p> 
+            <fieldset>
+                <legend> gender </legend>
+            Male <input type="radio" name="gender" id=""> Female <input type="radio" name="gender" id="">
+            </fieldset>
+        </p>
+        <p>Address: <textarea name="addr" id="" cols="30" rows="10"></textarea></p>
+        <p>Pincode: <input type="number" name="pin" id=""></p>
+        <h4> Payment Details </h4>
+        <p>Card type: <select name="card_type" id="">
+            <option> ---Select a Card type---</option>
+            <option> Rupay </option>
+            <option> Master Card </option>
+            <option> Debit Card </option>
+        </select></p>
+        <p>Card name: <input type="text" name="card_name" id=""></p>
+        <p>CVV: <input type="password" name="cvv" id=""></p>
+        <p>Expiry date: <input type="date" name="exp_date" id=""></p>
+        <input type="submit" value="Pay Now">
+    </form>
+    
+</body>
+</html>

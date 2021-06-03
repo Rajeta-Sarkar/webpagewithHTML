@@ -1,0 +1,144 @@
+ 
+        inline elements: <em> -> emphasize : it is inline i.e. it will take the space of the content only, 
+                                             and no extra space
+                         <span>
+        block-level elements: <p> -> paragraph :occupies the complete horizontal space, even if the content
+                                                is short
+                              <div>
+                            
+        Semantic Tags: Tags which clearly difines the content 
+        like <p>, <h1>---<h6>, <nav>
+  
+
+For making a website 
+1. visualize it and draw it of how it should look like
+2. use whimsical:wireframe == use this to draw the layout of the website and check how its 
+   gonna look like
+
+Link Css 
+1. inline - style
+2. external - <link rel="stylesheet" href="style.css"> inside href the name of the file
+3. internal - inside head tag use <style> 
+                                        h2{
+                                                color: "brown";
+                                        }
+                                  </style>
+
+Types of Selectors:
+1. Type                            - h1{ }   h1= selector iside it is having property and value
+2. Universal                       - *{ }   used to select every element
+3. Class                           - .box{ }     .classname{ }   or tagname.classname{}
+4. Id                              - #idname{ }  or tagname#idname{ }  tag ke andar id ko select karne ke lie
+5. Attribute                       - tagname[attribute name]{ }  like li[class]{} vahi <li> select honge jiske andar class="" hoge 
+                                     or li[class="a"] vahi list select hogi jiske andar class="a" naam ka attribute hoga
+                                     or li[class~="a"] matlab voh sare li ko select karo jiske andar class="a" or class="a b" (matalb a and b do alag elements hai is class k)
+6. Pseudo-class                    - p:first-child{ }    to madify different states of an element :hover :visited
+7. Pseudo-element                  - p::first-line{ }
+8. Descendent combinator           - article p  matlab artile tag k andar p tag jake select ho jaega
+9. Child combinator                - article > p mtlab article tag ke andar ke saare p tag select hojaenge
+10. Adjacent sibling combinator    - h1 + p matlab h1 ke just baad wale p tag ko select kar rahe hai
+11. General sibling combinator     - h1 - p
+
+combined selector:
+h1,p,span{
+        color:"red";
+}
+
+class selector:
+body h1+p .special{  matlab <body> ke andar <h1> ke just baad wale <p> ke andar me .special ke andar ke coontent 
+                     ko select karrae hai 
+        color: black;
+        background color: blue;
+}
+
+color
+background-color
+border-color
+RGB red green blue - intensity of each color between(0-255)
+color: rgb(0,0,0)
+RGBA A for alpha == opacity (more the value the color will get transparent)
+rgba(0,0,0,0.987)
+Hexadecimal color #RRGGBB
+#ffffff - white (6f)
+
+background-image: url("image.jpg") with height:100px; width: 1000px;
+background repeat: repeat - x or repeat-y or no repeat
+
+background-position: top/left/center/right/ bottom 50px right 100px;
+
+background-attachment: fixed or scroll
+
+Fonts in CSS:
+
+font-family:serif,or san-serif,or monospace,or cursive
+font-style:normal or italic or oblique 40deg 
+font-size: % or px or em or keyword like smaller
+font-weight: 400 (normal) / 700 (bold) / 900 max
+
+Formatting text with CSS:
+text-align: left/ right/ center/ justify 
+text-decoration: overline /underline/ line-through/ underline overline
+text-transform: uppercase/ lowercase/ none/ full-width/ capitalize( first letter of each letter will be capital)
+text-indent:0/ 30%/ -3em;
+line-height: spacing between each line
+letter-spacing: letters ke beech me kitni space deni hai- normal/ .2em/ 1px/ -1px
+word-spacing: words ke beech ki spacing- normal/ 1rem/ 4px/ 120%/ -4ch
+color for color
+text-shadow: make the text lool 3D
+
+<p> ya <h1> ko selct karoge toh text me color aaega as it contains text element
+<div> ko select karo toh box me color aaega
+
+Shorthand property: 
+used to write multiple values in a property
+example:
+background-color: #000;
+background-image: url(images/bg.gif)
+background-repeat: no-repeat;
+background-position: left top;
+
+shorthand:
+background: #000 url(images/bg.gif) no-repeat left top;
+
+same with font: style weight size height family; //syntax
+
+border: width style color
+
+margin: top right bottom left
+
+List in CSS:
+list-style-type:disc/square/circle/roman/latin;
+list-style-position: inside/outside;
+list-style-image:url("urlofimage.png");
+
+Tables in HTML:
+table,th,td{
+        border: 1px solid black;  size type color
+}
+
+seperate border and collapse border
+border-collapse:seperate/collapse;
+padding to create space between cells inside table
+th,td{
+        padding:15px;
+}
+border-spacing:5px;
+
+ 
+◘ Cascading: if u are using a selector(let it be h1) multiple times then the last time you specified properties for h1 will
+  ovverrite all the previous properties you specifies in some other lines
+ 
+◘ Specificity: If the specificity of a selector is more than that of other selector which is selecting the same element then 
+  that wil overrite the selector with lower specificity
+  <li style="color: hotpink"> yaha style attribute ki specificity sabse zada hoti hai so this style will overrite all the
+   values inside <style></style> or styles.css 
+specificity order:
+style attribute > style tag and link style.css(dono me se jo bhi last(niche line) me likhoge voh vala apply hoga)
+
+◘ Inheritance: properties ko apne parent element se inherit karna
+how to control Inheritance
+1. Inherit: using the property of the parent element
+2. Initial: using the default decided value of the property
+3. Unset: rest the value 
+
+
