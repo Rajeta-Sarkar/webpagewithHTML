@@ -141,4 +141,50 @@ how to control Inheritance
 2. Initial: using the default decided value of the property
 3. Unset: rest the value 
 
+Debugging:
+css clip-path maker is used to resize the pictures
+how to use
+create class and then add clip-path copied from clip-path property down in the css clip path maker website
+.clip_circle {
+        clip-path: circle(50% at 50% 50%);        
+}
 
+box-sizing : content-box  // is the default value
+div yani ek tarike se tumhara box
+content-box: content ke andar se margin padding and border add hojate hai
+border-box: content ke andar se margin padding and border minus hojate hai
+
+using z index:
+while using z index we'll keep the position :absolute or sticky or fixed 
+z-index:default =0  aur jo z-index ka value bada hoga voh vala box sabse upar ki taraf aaega
+
+Responsiveness:
+<style>
+html{
+        font-size: 1em;
+}
+@media screen and(width:600px){     or max-width
+        body {
+                color: red;
+        }
+}
+@media (orientation: landscape){
+        
+}
+
+using "and" condition :both should be true
+@media screen and(width:600px) and (orientation: landscape){  
+        body {
+                color: xyz;
+        }
+}
+
+using "or" condition :either of one can be true
+@media screen and(width:600px),
+screen and (orientation: landscape){  
+        body {
+                color: xyz;
+        }
+}
+
+</style>
