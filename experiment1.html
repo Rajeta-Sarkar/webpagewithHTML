@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#boxes {
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#column1 {
+  background-color: #a1edcc;
+}
+
+#column2 {
+  background-color: #a0e9ed;
+}
+
+#column3 {
+  background-color: #f497f1;
+}
+
+#column4 {
+  background-color: blueviolet;
+}
+
+h3 {
+  color: #000000;
+  text-align: left;
+}
+h2 {
+    text-align: center;
+    color: green ;
+}
+@media screen and (min-width:1016px) {
+  div {
+  float: left;  
+  height: 100px;
+  width: 23%;
+  padding: 0 10px;
+  }
+}
+@media screen and (min-width:520px) and (max-width:1015px) {
+  div {
+  float: left;
+  height: 100px;
+  width: 35%;
+  padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 519px) {
+  div {
+  float: left;
+  height: 100px;
+  width: 100%;
+  padding: 0 10px;
+  }
+  
+}
+
+    </style>
+</head>
+<body>
+    <h2>This is to see the see the responsiveness of the website </h2>
+    <main id="boxes">
+      
+      <div id="column1">
+        <h3>Name 1</h3>
+        I am Rajeta
+      </div>
+      <div id="column2">
+        <h3>Name 2</h3>
+        <p>I am Sarkar</p>
+      </div>
+      <div id="column3">
+        <h3>Name 3</h3>
+        <p>I am Elon</p>
+      </div>
+      <div id="column4">
+        <h3>Name 4</h3>
+        <p>I am Musk</p>
+      </div>
+    </main>
+  </body>
+</html>
