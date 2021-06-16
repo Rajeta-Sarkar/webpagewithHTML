@@ -188,3 +188,18 @@ screen and (orientation: landscape){
 }
 
 </style>
+
+
+position property:
+------------------
+if position: relative;  == the normal flow
+and top:20px then the boxes will shift 20px down from top
+
+absolute: all the boxes will overlap ie only a particular place for all the boxes
+box1 at the bottom followed by box 2 3 and 4 on the top
+top on box-1 or bottom will work in same way 
+
+fix: normal flow but the box will be fixed even after scroll down it wont move
+
+sticky: mix of fixed + relative it scrolls in a professional fashion
+and mandatory is to give the top value withour it it will behave like relative
